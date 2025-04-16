@@ -1,0 +1,40 @@
+string defaultUsername = "admin";
+string defaultPassword = "Admin@123"; // Change this after first login
+dbname: carrentaldb
+<connectionStrings>
+    <add name="myconnection" connectionString="server=localhost;port=3308;user id=root;password=root;database=carrentaldb;SslMode=None;" providerName="MySql.Data.MySqlClient" />
+  </connectionStrings>
+
+tools> nuget package manager > console run: 
+Install-Package MySql.Data -Version 8.0.33
+Install-Package BCrypt.Net-Next -Version 4.0.2
+Install-Package iTextSharp -Version 5.5.13.3
+
+tool> nuget package management:
+Search nugetpackagemanagement for solution  : Microsoft.ReportViewer.WebForms
+Microsoft.ReportViewer.Common.10.0.40219.1
+Microsoft.ReportViewer.WebForms.10.0.40219.1
+
+
+
+
+Make a asp.net webform application in c# mysql 8.0 database
+with masterpage compatible with vs2019 and vs 2022
+Main Menu pages:
+1. Home page - landing page(See hospital service offered,vission,mission, welcome message)
+2. About Us - About hospital sample, with image
+3. Contact Us - Address, Google map location, Contact details
+4. Book Appointment - add client appointment form fullname, sex,bday, age(auto compute), email, contactno, address, Dropdown text  select from cars car_id,
+	schedule date from and return datetime,remarks,
+5. login -authenticate username,password for doctor/nurse can login
+6. Signup (Fullname, Username, password(Encrypted), address, contactno, email, isapproved? (approval by doctor as admin)
+7. Account Manager - crud  Approval of account (by doctor as admin)
+As administrator/Doctor Role:
+8. Patient Management - crud type of consultation admitted/checku-up and nurse login they can continue manage approval of appoint,
+ assign room if admitted, input medical history, alergic type and description, emergency contact name and emergency contact no,
+print patient medical record
+9. Room Management - crud id, room name, room no, type(choices: double, single), bed occupancy (1:2), isvacant? y/n
+10. home management - crud list of offered services posted in public home page
+
+make a bootstrap desing theme blue banner, dark main menu, white form with blue card
+feature crud has popup messages success,failed,error using toast alert
