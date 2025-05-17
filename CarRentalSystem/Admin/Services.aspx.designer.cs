@@ -132,33 +132,6 @@ namespace CarRentalSystem.Admin
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
 
         /// <summary>
-        /// txtRouteOrigin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRouteOrigin;
-
-        /// <summary>
-        /// txtRouteDestination control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRouteDestination;
-
-        /// <summary>
-        /// txtContactPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContactPerson;
-
-        /// <summary>
         /// txtPrice control.
         /// </summary>
         /// <remarks>
@@ -168,13 +141,13 @@ namespace CarRentalSystem.Admin
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
 
         /// <summary>
-        /// chkActive control.
+        /// dpstatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkActive;
+        protected global::System.Web.UI.WebControls.DropDownList dpstatus;
 
         /// <summary>
         /// btnSave control.

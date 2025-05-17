@@ -107,7 +107,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-primary">
+          <div class="card card-info">
             <div class="card-header">
               <h3 class="card-title">Manage Reservation</h3>
 
@@ -119,6 +119,7 @@
             <div class="card-body">
                  <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
+                        <asp:HiddenField ID="hd_userrole" runat="server"  />
                                              <div class="form-group row">
                                
                                                 <div class="col-sm-4">
@@ -145,7 +146,7 @@
                                              
                                                   </div>
                        <div class="table-responsive">
-                           <asp:GridView ID="gv_masterlist" runat="server" 
+                           <asp:GridView ID="gv_masterlist" runat="server" OnRowDataBound="gv_masterlist_RowDataBound"
                               CssClass="table  table-bordered table-sm  table-hover" 
                               AutoGenerateColumns="false" AllowPaging="true"
                               OnPageIndexChanging="OnPaging" PageSize="10" 
@@ -155,7 +156,7 @@
                            <asp:TemplateField>
                                         <HeaderTemplate> Reserve No </HeaderTemplate>
                                      <ItemTemplate>
-                                         <asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("bookingno") %>' Target="_blank" NavigateUrl='<%# "~/reports/booking/" + Eval("bookingno") + "_"+ Eval("booking_id") +".pdf" %> '></asp:HyperLink>
+                                       <asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("bookingno") %>' Target="_blank" NavigateUrl='<%# "~/PrintReservation?id=" + Eval("booking_id") %> '></asp:HyperLink>
 
                                            </ItemTemplate>
                                    </asp:TemplateField>
@@ -177,8 +178,10 @@
                                       <asp:HiddenField ID="hd_id" Value='<%#Eval("booking_id") %>' runat="server"></asp:HiddenField>
                            <asp:HiddenField ID="hd_status" Value='<%#Eval("status") %>' runat="server"></asp:HiddenField>
                                       <asp:HiddenField ID="hd_name" Value='<%#Eval("client_name") %>' runat="server"></asp:HiddenField>
-                                      <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs "  CommandArgument='<%# Eval("booking_id") %>' onclick="btn_select_Click"  runat="server" >Manage</asp:LinkButton>
-                                      <asp:LinkButton ID="btn_delete" CssClass="btn btn-danger btn-xs " onclick="btn_delete_Click" runat="server"
+                                      <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs"  CommandArgument='<%# Eval("booking_id") %>' onclick="btn_select_Click"  runat="server" >Manage</asp:LinkButton>
+                                   
+                                         <asp:HyperLink ID="HyperLink2"  CssClass="btn btn-success btn-xs " runat="server" NavigateUrl='<%# "~/Billing?bookid=" + Eval("booking_id") %>'>Add Bill</asp:HyperLink>
+                                         <asp:LinkButton ID="btn_delete" CssClass="btn btn-danger btn-xs " onclick="btn_delete_Click" runat="server"
                                      OnClientClick="return getConfirmation_verifys(this, 'Please confirm','Are you sure you want to Delete?');"
                                        >Remove</asp:LinkButton>
                                      </ItemTemplate>

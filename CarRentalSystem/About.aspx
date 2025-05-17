@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-header bg-primary text-white">
+                        <div class="card-header bg-info text-white">
                             <h5 class="mb-0">Our Vision</h5>
                         </div>
                         <div class="card-body">
@@ -25,7 +25,7 @@
 
                 <div class="col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-header bg-primary text-white">
+                        <div class="card-header bg-info text-white">
                             <h5 class="mb-0">Contact Information</h5>
                         </div>
                         <div class="card-body">
@@ -38,7 +38,7 @@
             </div>
 
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-info text-white">
                     <h5 class="mb-0">Our Location</h5>
                 </div>
                 <div class="card-body p-0">

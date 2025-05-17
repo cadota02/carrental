@@ -42,6 +42,15 @@ namespace CarRentalSystem
         protected global::System.Web.UI.ScriptManager ScriptManagersss;
 
         /// <summary>
+        /// lihome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lihome;
+
+        /// <summary>
         /// home control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,31 @@ namespace CarRentalSystem
         protected global::System.Web.UI.HtmlControls.HtmlAnchor home;
 
         /// <summary>
-        /// contacts control.
+        /// liBilling control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor contacts;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liBilling;
+
+        /// <summary>
+        /// billing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor billing;
+
+        /// <summary>
+        /// limanagecar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl limanagecar;
 
         /// <summary>
         /// cars control.
@@ -69,6 +96,69 @@ namespace CarRentalSystem
         protected global::System.Web.UI.HtmlControls.HtmlAnchor cars;
 
         /// <summary>
+        /// lischedule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lischedule;
+
+        /// <summary>
+        /// avail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor avail;
+
+        /// <summary>
+        /// liservice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liservice;
+
+        /// <summary>
+        /// services control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor services;
+
+        /// <summary>
+        /// licontacts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl licontacts;
+
+        /// <summary>
+        /// contacts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor contacts;
+
+        /// <summary>
+        /// liaccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liaccount;
+
+        /// <summary>
         /// account control.
         /// </summary>
         /// <remarks>
@@ -76,6 +166,15 @@ namespace CarRentalSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor account;
+
+        /// <summary>
+        /// changepass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor changepass;
 
         /// <summary>
         /// LoginStatus1 control.

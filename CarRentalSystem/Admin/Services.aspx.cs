@@ -43,10 +43,7 @@ namespace CarRentalSystem.Admin
                     {
                         sql += @"and
                        (name LIKE @search 
-                          OR description LIKE @search
-                          OR route_origin LIKE @search
-                          OR route_destination LIKE @search
-                          OR contactperson LIKE @search) ";
+                          OR description LIKE @search) ";
                     }
                     sql += "  order by service_id desc ";
                     cmd.CommandText = sql;
@@ -85,13 +82,11 @@ namespace CarRentalSystem.Admin
             // Clear text fields
             txtServiceName.Text = "";
             txtDescription.Text = "";
-            txtRouteOrigin.Text = "";
-            txtRouteDestination.Text = "";
-            txtContactPerson.Text = "";
+          
             txtPrice.Text = "";
 
             // Uncheck checkbox
-            chkActive.Checked = false;
+            dpstatus.ClearSelection();
             lbl_header.Text = "Add Service";
 
             txt_search.Focus();
@@ -134,12 +129,10 @@ namespace CarRentalSystem.Admin
 
                         txtServiceName.Text = dr["name"].ToString();
                         txtDescription.Text = dr["description"].ToString();
-                        txtRouteOrigin.Text = dr["route_origin"].ToString();
-                        txtRouteDestination.Text = dr["route_destination"].ToString();
-                        txtContactPerson.Text = dr["contactperson"].ToString();
+                      
                         txtPrice.Text = dr["price"].ToString();
 
-                        chkActive.Checked = Convert.ToBoolean(dr["is_active"]);
+                        dpstatus.SelectedValue = dr["is_active"].ToString();
 
                     }
                 }
@@ -224,14 +217,13 @@ namespace CarRentalSystem.Admin
                     if (hd_serviceid.Value == "0") // Insert
                     {
                         query = @"INSERT INTO services 
-                          (name, description, route_origin, route_destination, contactperson, price, is_active) 
-                          VALUES (@name, @desc, @origin, @dest, @contact, @price, @active)";
+                          (name, description, price, is_active) 
+                          VALUES (@name, @desc, @price, @active)";
                     }
                     else // Update
                     {
                         query = @"UPDATE services SET 
-                          name=@name, description=@desc, route_origin=@origin, route_destination=@dest, 
-                          contactperson=@contact, price=@price, is_active=@active" +
+                          name=@name, description=@desc, price=@price, is_active=@active" +
                           " WHERE service_id=@id";
 
                     }
@@ -243,11 +235,9 @@ namespace CarRentalSystem.Admin
                         }
                         cmd.Parameters.AddWithValue("@name", txtServiceName.Text.Trim());
                         cmd.Parameters.AddWithValue("@desc", txtDescription.Text.Trim());
-                        cmd.Parameters.AddWithValue("@origin", txtRouteOrigin.Text.Trim());
-                        cmd.Parameters.AddWithValue("@dest", txtRouteDestination.Text.Trim());
-                        cmd.Parameters.AddWithValue("@contact", txtContactPerson.Text.Trim());
+                    
                         cmd.Parameters.AddWithValue("@price", Convert.ToDecimal(txtPrice.Text.Trim()));
-                        cmd.Parameters.AddWithValue("@active", chkActive.Checked ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@active", dpstatus.SelectedValue);
 
                         cmd.ExecuteNonQuery();
 

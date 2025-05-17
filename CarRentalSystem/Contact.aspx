@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_body" runat="server">
       <div class="container mt-5">
             <div class="card shadow">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-info text-white">
                     <h4>Contact Us</h4>
                 </div>
                 <div class="card-body">

@@ -42,7 +42,7 @@
      <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-primary">
+          <div class="card card-info">
             <div class="card-header">
               <h3 class="card-title">Manage Account</h3>
 
@@ -192,7 +192,7 @@
                 <asp:DropDownList ID="dprole" runat="server" CssClass="form-control">
                     <asp:ListItem Text="Administrator" Value="Admin"></asp:ListItem>
                     <asp:ListItem Text="Client" Value="Client"></asp:ListItem>
-             
+                   <asp:ListItem Text="Cashier" Value="Cashier"></asp:ListItem>
                 </asp:DropDownList>
             </div>
                 <div class="col-sm-3">

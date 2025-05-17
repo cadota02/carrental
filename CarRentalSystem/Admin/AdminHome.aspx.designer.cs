@@ -33,6 +33,15 @@ namespace CarRentalSystem.Admin
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
+        /// hd_userrole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hd_userrole;
+
+        /// <summary>
         /// txt_search control.
         /// </summary>
         /// <remarks>

@@ -55,6 +55,66 @@ namespace CarRentalSystem
                 }
             }
         }
+        public static (int userId, string role) GetUserIdAndRole(string username)
+        {
+            int userId = 0;
+            string role = string.Empty;
+
+            string connString = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                string query = "SELECT ID, Role FROM users WHERE Username = @Username";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+
+                    conn.Open();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            userId = Convert.ToInt32(reader["ID"]);
+                            role = reader["Role"].ToString();
+                        }
+                    }
+                }
+            }
+
+            return (userId, role);
+        }
+        public static (int userId, string role, string pass) GetUserIdAndRoleVerifypass(string username)
+        {
+            int userId = 0;
+            string role = string.Empty;
+            string pass = string.Empty;
+            string connString = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                string query = "SELECT ID, Role, PasswordHash FROM users WHERE Username = @Username";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@PasswordHash", username);
+
+                    conn.Open();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            userId = Convert.ToInt32(reader["ID"]);
+                            role = reader["Role"].ToString();
+                            pass = reader["PasswordHash"].ToString();
+
+                        }
+                    }
+                }
+            }
+
+            return (userId, role, pass);
+        }
 
     }
 }

@@ -52,7 +52,6 @@ namespace CarRentalSystem
           "~/Content/AdminLTE/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css",
           "~/Content/AdminLTE/plugins/toastr/toastr.min.css",
           "~/Content/AdminLTE/dist/css/custom.css",
-          "~/Content/AdminLTE/plugins/pace-progress/themes/blue/pace-theme-flash.css",
           "~/Content/AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
            "~/Content/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css"));
 
@@ -61,8 +60,7 @@ namespace CarRentalSystem
           "~/Content/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js",
           "~/Content/AdminLTE/dist/js/adminlte.min.js",
              "~/Content/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
-              "~/Content/AdminLTE/dist/js/demo.js",
-               "~/Content/AdminLTE/plugins/pace-progress/pace.min.js"));
+              "~/Content/AdminLTE/dist/js/demo.js" ));
         }
     }
 }

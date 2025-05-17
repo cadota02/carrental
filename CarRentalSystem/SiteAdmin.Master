@@ -39,21 +39,32 @@
       <div class="collapse navbar-collapse order-3" id="navbarCollapse">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li id="lihome" runat="server"  class="nav-item">
             <a  id="home" runat="server" href="AdminHome" class="nav-link">Home</a>
           </li>
-         
-     
-             <li class="nav-item">
+        
+         <li id="liBilling" runat="server" class="nav-item">
+            <a  id="billing" runat="server" href="BillingRecords" class="nav-link">Billing</a>
+          </li>
+
+         <li id="limanagecar" runat="server"  class="nav-item">
+          <a id="cars" runat="server" class="nav-link" href="Cars">Manage Cars</a>
+        </li>
+              <li id="lischedule" runat="server" class="nav-item">
+            <a id="avail" runat="server" href="CarSchedule" class="nav-link">Schedule of Cars </a>
+          </li>
+             <li id="liservice" runat="server"  class="nav-item">
+          <a id="services" runat="server" class="nav-link" href="Services"> Services/Fees</a>
+        </li>
+               <li id="licontacts" runat="server"  class="nav-item">
             <a id="contacts" runat="server" href="Contacts" class="nav-link"> Contacts </a>
           </li>
-         
-         <li class="nav-item">
-          <a id="cars" runat="server" class="nav-link" href="Cars"> Cars</a>
-        </li>
-              <li class="nav-item">
+              <li id="liaccount" runat="server"  class="nav-item">
             <a id="account" runat="server" href="Account" class="nav-link"> Account</a>
           </li>
+                <li class="nav-item">
+          <a id="changepass" runat="server" class="nav-link" href="ChangePass"> Change Password</a>
+        </li>
         
         </ul>
 
@@ -125,7 +136,7 @@
               </div>
             </div>
 
-            <div class="card card-primary card-outline">
+            <div class="card card-info card-outline">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
 
@@ -152,7 +163,7 @@
               </div>
             </div>
 
-            <div class="card card-primary card-outline">
+            <div class="card card-info card-outline">
               <div class="card-header">
                 <h5 class="card-title m-0">Featured</h5>
               </div>

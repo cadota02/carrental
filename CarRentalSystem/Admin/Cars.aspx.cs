@@ -77,6 +77,7 @@ namespace CarRentalSystem.Admin
         }
         public void reset()
         {
+            txtrate.Text = "";
             txtCarName.Text = "";
             txtContent.Text = "";
             txtContactPerson.Text = "";
@@ -128,7 +129,9 @@ namespace CarRentalSystem.Admin
                         txtContactPerson.Text = dr["contact_person"].ToString();
                         txtContactNo.Text = dr["contact_no"].ToString();
                         chkAvailable.Checked = Convert.ToBoolean(dr["is_available"]);
+                        txtrate.Text = dr["RatePerDay"].ToString();
                         string imgPath = dr["image_path"].ToString();
+
                         if (!string.IsNullOrEmpty(imgPath))
                         {
                             imgPreview.ImageUrl = imgPath;
@@ -240,14 +243,14 @@ namespace CarRentalSystem.Admin
                     string query = "";
                     if (hd_carid.Value == "0") // Insert
                     {
-                        query = @"INSERT INTO cars (car_name, description, image_path, contact_person, contact_no, is_available) 
-                                        VALUES (@car_name, @desc, @img, @person, @no, @avail)";
+                        query = @"INSERT INTO cars (car_name, description, image_path, contact_person, contact_no, is_available, RatePerDay) 
+                                        VALUES (@car_name, @desc, @img, @person, @no, @avail,@RatePerDay)";
                     }
                     else // Update
                     {
                         query = @"UPDATE cars SET car_name=@car_name, description=@desc, 
                         contact_person=@person, contact_no=@no, is_available=@avail," +
-                           " image_path=@img" +
+                           " image_path=@img, RatePerDay=@RatePerDay" +
                             " WHERE car_id=@id";
                      
                     }
@@ -263,7 +266,7 @@ namespace CarRentalSystem.Admin
                         cmd.Parameters.AddWithValue("@no", txtContactNo.Text.Trim());
                         cmd.Parameters.AddWithValue("@avail", chkAvailable.Checked ? 1 : 0);
                         cmd.Parameters.AddWithValue("@img", imagePath);
-
+                        cmd.Parameters.AddWithValue("@RatePerDay", txtrate.Text);
                         cmd.ExecuteNonQuery();
 
                         AlertNotify.ShowMessage(this, "Successfully Saved!", "Success", AlertNotify.MessageType.Success);

@@ -40,9 +40,9 @@
      <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-primary">
+          <div class="card card-info">
             <div class="card-header">
-              <h3 class="card-title">Manage Services</h3>
+              <h3 class="card-title">Manage Services/Fees</h3>
 
               <div class="card-tools">
    
@@ -66,7 +66,7 @@
                                                           <asp:LinkButton ID="btn_reset" CssClass="btn btn-default btn-sm" 
                                                          runat="server" onclick="btn_reset_Click" BackColor="#999999">Refresh</asp:LinkButton>
                                                         <asp:LinkButton ID="btn_add"  CssClass="btn btn-success btn-sm" runat="server" 
-                                      OnClick="btn_add_Click">Add Service</asp:LinkButton>
+                                      OnClick="btn_add_Click">Add Service/Fees</asp:LinkButton>
                                                 </div>
                                              
                                                   </div>
@@ -91,9 +91,6 @@
                                            <asp:BoundField DataField="name" HeaderText="Service Name" ItemStyle-HorizontalAlign="Center" ItemStyle-CssClass="text-center align-middle"/>
         
                                                <asp:BoundField DataField="description" HeaderText="Description" ItemStyle-HorizontalAlign="Center" ItemStyle-CssClass="text-center align-middle" />
-                                                 <asp:BoundField DataField="route_origin" HeaderText="Route Origin"    ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
-                                                <asp:BoundField DataField="route_destination" HeaderText="Destination" ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
-                                       <asp:BoundField DataField="contactperson" HeaderText="Contact Person" ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
                                        <asp:BoundField DataField="price" HeaderText="Price" ItemStyle-HorizontalAlign="Left"  DataFormatString="{0:N2}"  ItemStyle-CssClass="text-center align-middle" />
                                                 <asp:BoundField DataField="Status" HeaderText="Status" ItemStyle-HorizontalAlign="Center"  ItemStyle-CssClass="text-center align-middle" />
 
@@ -162,43 +159,26 @@
           </div>
         </div>
 
+   
         <div class="form-group row">
-          <div class="col-sm-6">
-            <label>Route Origin
-              <asp:RequiredFieldValidator ControlToValidate="txtRouteOrigin" runat="server" ErrorMessage="*" ForeColor="Red" ValidationGroup="add" />
-            </label>
-            <asp:TextBox ID="txtRouteOrigin" runat="server" CssClass="form-control" />
-          </div>
-
-          <div class="col-sm-6">
-            <label>Route Destination
-              <asp:RequiredFieldValidator ControlToValidate="txtRouteDestination" runat="server" ErrorMessage="*" ForeColor="Red" ValidationGroup="add" />
-            </label>
-            <asp:TextBox ID="txtRouteDestination" runat="server" CssClass="form-control" />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-6">
-            <label>Contact Person</label>
-            <asp:TextBox ID="txtContactPerson" runat="server" CssClass="form-control" />
-          </div>
-
           <div class="col-sm-6">
             <label>Price (₱)
               <asp:RequiredFieldValidator ControlToValidate="txtPrice" runat="server" ErrorMessage="*" ForeColor="Red" ValidationGroup="add" />
             </label>
             <asp:TextBox ID="txtPrice" TextMode="Number" runat="server" step="0.01" min="0" CssClass="form-control" />
           </div>
-        </div>
 
-        <div class="form-group row">
-          <div class="col-sm-6">
-            <label>Active? </label>   <asp:CheckBox ID="chkActive" runat="server" />
+            <div class="col-sm-6">
+
+                  <labe>Status</label>
+                                <asp:DropDownList ID="dpstatus" runat="server" CssClass="form-control">
+                                    <asp:ListItem Text="Active" Value="1"></asp:ListItem>
+                                      <asp:ListItem Text="Inactive" Value="0"></asp:ListItem>
+                                    </asp:DropDownList>
           </div>
+        </div>
 
        
-        </div>
      
       
                               </div>

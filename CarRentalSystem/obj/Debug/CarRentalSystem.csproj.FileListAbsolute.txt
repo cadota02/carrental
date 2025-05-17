@@ -52,8 +52,10 @@ C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\AspNet.ScriptMana
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\AspNet.ScriptManager.jQuery.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BCrypt.Net-Next.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BouncyCastle.Crypto.dll
+C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BouncyCastle.Cryptography.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\Google.Protobuf.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\itextsharp.dll
+C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\itextsharp.xmlworker.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\K4os.Compression.LZ4.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\K4os.Compression.LZ4.Streams.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\K4os.Hash.xxHash.dll
@@ -74,6 +76,7 @@ C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\System.Threading.
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\System.Web.Optimization.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\WebGrease.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BCrypt.Net-Next.xml
+C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BouncyCastle.Cryptography.xml
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\Google.Protobuf.pdb
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\Google.Protobuf.xml
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\itextsharp.xml
@@ -95,7 +98,3 @@ C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\Microsoft.CodeDom
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\obj\Debug\CarRentalSystem.csproj.CopyComplete
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\obj\Debug\CarRentalSystem.dll
 C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\obj\Debug\CarRentalSystem.pdb
-C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BouncyCastle.Cryptography.dll
-C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\itextsharp.xmlworker.dll
-C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\bin\BouncyCastle.Cryptography.xml
-C:\Users\ASUS\source\repos\CarRentalSystem\CarRentalSystem\obj\Debug\CarRentalSystem.csprojAssemblyReference.cache

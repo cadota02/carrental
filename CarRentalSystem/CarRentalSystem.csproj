@@ -159,16 +159,20 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\Account.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Billing.aspx" />
+    <Content Include="Admin\BillingRecord.aspx" />
     <Content Include="Admin\Cars.aspx" />
     <Content Include="Admin\Contacts.aspx" />
     <Content Include="Admin\Services.aspx" />
+    <Content Include="Auth.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Customer\AddReservation.aspx" />
+    <Content Include="Customer\CustomerHome.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -605,6 +609,11 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="shared\BillPrint.aspx" />
+    <Content Include="shared\CalendarSchedule.aspx" />
+    <Content Include="shared\calendar\index.global.js" />
+    <Content Include="shared\calendar\index.global.min.js" />
+    <Content Include="shared\ChangePass.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -625,6 +634,20 @@
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BillingRecord.aspx.cs">
+      <DependentUpon>BillingRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BillingRecord.aspx.designer.cs">
+      <DependentUpon>BillingRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Cars.aspx.cs">
       <DependentUpon>Cars.aspx</DependentUpon>
@@ -656,6 +679,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth.aspx.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth.aspx.designer.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -663,15 +693,22 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs" />
-    <Compile Include="DBUserdefualt.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Customer\AddReservation.aspx.cs">
+      <DependentUpon>AddReservation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Customer\AddReservation.aspx.designer.cs">
+      <DependentUpon>AddReservation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\CustomerHome.aspx.cs">
+      <DependentUpon>CustomerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerHome.aspx.designer.cs">
+      <DependentUpon>CustomerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DBUserdefualt.cs" />
     <Compile Include="ErrorLogger.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -707,6 +744,33 @@
     <Compile Include="Reservation.aspx.designer.cs">
       <DependentUpon>Reservation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="shared\AvailiabityCarsHandler.ashx.cs">
+      <DependentUpon>AvailiabityCarsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="shared\BillPrint.aspx.cs">
+      <DependentUpon>BillPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shared\BillPrint.aspx.designer.cs">
+      <DependentUpon>BillPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shared\CalendarSchedule.aspx.cs">
+      <DependentUpon>CalendarSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shared\CalendarSchedule.aspx.designer.cs">
+      <DependentUpon>CalendarSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shared\CarSchedule.ashx.cs">
+      <DependentUpon>CarSchedule.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="shared\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shared\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -728,6 +792,13 @@
     <Compile Include="SiteAdmin.Master.designer.cs">
       <DependentUpon>SiteAdmin.Master</DependentUpon>
     </Compile>
+    <Compile Include="SiteCustomer.Master.cs">
+      <DependentUpon>SiteCustomer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteCustomer.Master.designer.cs">
+      <DependentUpon>SiteCustomer.Master</DependentUpon>
+    </Compile>
     <Compile Include="SitePublic.Master.cs">
       <DependentUpon>SitePublic.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -735,6 +806,7 @@
     <Compile Include="SitePublic.Master.designer.cs">
       <DependentUpon>SitePublic.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserHelper.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -756,6 +828,9 @@
     <Content Include="Scripts\New\jquery-3.3.1.min.map" />
     <Content Include="SitePublic.Master" />
     <Content Include="SiteAdmin.Master" />
+    <Content Include="SiteCustomer.Master" />
+    <Content Include="shared\AvailiabityCarsHandler.ashx" />
+    <Content Include="shared\CarSchedule.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

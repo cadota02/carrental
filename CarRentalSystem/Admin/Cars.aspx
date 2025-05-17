@@ -83,7 +83,7 @@
      <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-primary">
+          <div class="card card-info">
             <div class="card-header">
               <h3 class="card-title">Manage Car</h3>
 
@@ -146,7 +146,8 @@
                                             
                                                  <asp:BoundField DataField="contact_person" HeaderText="Contact Person"    ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
                                                 <asp:BoundField DataField="contact_no" HeaderText="Contact No" ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
-                                                <asp:BoundField DataField="Status" HeaderText="Status" ItemStyle-HorizontalAlign="Center"  ItemStyle-CssClass="text-center align-middle" />
+                                                 <asp:BoundField DataField="RatePerDay"   DataFormatString="{0:N2}"  HeaderText="Rate Perday" ItemStyle-HorizontalAlign="Left"  ItemStyle-CssClass="text-center align-middle" />
+                                      <asp:BoundField DataField="Status" HeaderText="Status" ItemStyle-HorizontalAlign="Center"  ItemStyle-CssClass="text-center align-middle" />
 
                                    <asp:TemplateField  ItemStyle-CssClass="text-center align-middle">
                                         <HeaderTemplate> Action </HeaderTemplate>
@@ -205,9 +206,14 @@
                             <asp:TextBox ID="txtCarName" runat="server" CssClass="form-control" />
                      
                         </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-3">
                               <label>Available?</label>
                              <asp:CheckBox ID="chkAvailable" CssClass="form-control"  runat="server" />
+
+                        </div>
+                              <div class="col-sm-3">
+                              <label>Rate Per Day</label>
+                               <asp:TextBox ID="txtrate" TextMode="Number" runat="server" CssClass="form-control" />
 
                         </div>
                        </div>

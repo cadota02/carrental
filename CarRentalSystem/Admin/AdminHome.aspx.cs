@@ -25,15 +25,24 @@ namespace CarRentalSystem.Admin
         protected int totalCount;
         protected async void Page_Load(object sender, EventArgs e)
         {
-            if (!this.Page.User.Identity.IsAuthenticated)
+            if (!IsPostBack)
             {
-                FormsAuthentication.RedirectToLoginPage();
-            }
-            else
-            {
-                dashboardCounts = await dashboardService.GetCountsAsync();
-                DisplayCounts();
-              bind_record();
+                if (!this.Page.User.Identity.IsAuthenticated)
+                {
+                    FormsAuthentication.RedirectToLoginPage();
+                }
+                else
+                {
+                    string username = Page.User.Identity.Name.ToString();
+                    var result = DBUserdefualt.GetUserIdAndRole(username);
+                    hd_userrole.Value = result.role;
+                    dashboardCounts = await dashboardService.GetCountsAsync();
+                    DisplayCounts();
+                    bind_record();
+
+                  
+                }
+               
             }
             //AlertNotify.ShowMessage(this, "Welcome to the site!", "Greetings", AlertNotify.MessageType.Information);
         }
@@ -128,6 +137,9 @@ namespace CarRentalSystem.Admin
                 AlertNotify.ShowMessage(this, ex.Message.ToString(), "Error", AlertNotify.MessageType.Error);
             }
         }
+       
+
+
         public void get_data(string id)
         {
             //try
@@ -267,7 +279,23 @@ namespace CarRentalSystem.Admin
                 }
             }
         }
-       
+        protected void gv_masterlist_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                // Get the user's role, from hidden field or session
+                string userRole = hd_userrole.Value; // or Session["userrole"].ToString();
+
+                // Find the delete button in the current row
+                LinkButton btnDelete = (LinkButton)e.Row.FindControl("btn_delete");
+                LinkButton btn_select = (LinkButton)e.Row.FindControl("btn_select");
+                if ((btn_select != null || btnDelete != null) && userRole == "Cashier")
+                {
+                    btnDelete.Visible = false;
+                    btn_select.Visible = false;
+                }
+            }
+        }
         protected void dpstatus_SelectedIndexChanged(object sender, EventArgs e)
         {
            
